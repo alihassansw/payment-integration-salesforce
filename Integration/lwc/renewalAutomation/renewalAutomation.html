@@ -1,0 +1,55 @@
+<template>
+  <template if:true={showSpinner}>
+    <lightning-spinner class="slds-is-fixed" alternative-text="Loading"></lightning-spinner>
+  </template>
+  
+  <lightning-card class="slds-m-bottom_medium slds-grid" title="Process Renewal Payments" icon-name="standard:report">
+    <lightning-button-group slot="actions">
+      <lightning-button
+        onclick={handleConfirmClick}
+        title="Double click to run all"
+        label="Run All"
+        variant="brand"
+        class="slds-m-left_x-small"
+      ></lightning-button>
+      <lightning-button-menu
+        alternative-text="Show menu"
+        variant="brand"
+        menu-alignment="right"
+        icon-name="utility:filterList"
+      >
+        <lightning-menu-item onclick={filterData} name="All" value="All" label="All"></lightning-menu-item>
+        <lightning-menu-item
+          onclick={filterData}
+          name="Uncharged"
+          value="Uncharged"
+          label="Uncharged"
+        ></lightning-menu-item>
+        <lightning-menu-item onclick={filterData} name="Pending" value="Pending" label="Pending"></lightning-menu-item>
+        <lightning-menu-item
+          onclick={filterData}
+          name="Successful"
+          value="Successful"
+          label="Successful"
+        ></lightning-menu-item>
+        <lightning-menu-item
+          onclick={filterData}
+          name="Unsuccessful"
+          value="Unsuccessful"
+          label="Unsuccessful"
+        ></lightning-menu-item>
+      </lightning-button-menu>
+    </lightning-button-group>
+
+    <lightning-datatable
+      key-field="id"
+      data={data}
+      show-row-number-column
+      columns={columnsList}
+      row-number-offset={rowOffset}
+      hide-checkbox-column
+      onrowaction={handleRowAction}
+    >
+    </lightning-datatable>
+  </lightning-card>
+</template>
