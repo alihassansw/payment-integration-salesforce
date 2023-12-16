@@ -1,7 +1,6 @@
 public class StripeIntegration {
-  public static final String BASE_URL = 'https://api.stripe.com';
-  public static final String SECRET_API_KEY = 'sk_test_51NZu40Agww1gW1XKGPD9gpstxiHJdsk91PtKXXjCZH1enXay2Yx6EPJi0ZuSP7V7hWJSnbOUceSlo6KP39E0cvyo00rKriKehK'; 
-  // sk_live_4sTZNpgsfWsYqufYxNkzMHCx : sk_test_51NZu40Agww1gW1XKGPD9gpstxiHJdsk91PtKXXjCZH1enXay2Yx6EPJi0ZuSP7V7hWJSnbOUceSlo6KP39E0cvyo00rKriKehK
+  public static final String BASE_URL = 'https://api.example.com';
+  public static final String SECRET_API_KEY = 'xxxxxxxxxxxxxxxxxxx';  
 
   public static HttpResponse makeApiCall(String requestBody, String endpoint) {
     try {
