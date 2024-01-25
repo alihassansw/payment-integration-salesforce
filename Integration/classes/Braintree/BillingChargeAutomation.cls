@@ -1,7 +1,7 @@
 /*
 ********************************************************
 @Class Name     : BillingChargeAutomation
-@written by     : Aasia Naseer 
+@written by     : Ali Hassan 
 @description    : Braintree Integration
 @param          :
 @return         : Output
